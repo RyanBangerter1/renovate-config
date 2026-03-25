@@ -1,0 +1,17 @@
+{
+  "extends": ["config:recommended"],
+  "timezone": "America/Denver",
+  "schedule": ["after 8am and before 10:00am every weekday"],
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 10,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
+  ]
+}
